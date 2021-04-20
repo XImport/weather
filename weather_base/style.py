@@ -1,5 +1,5 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
-from .api import Api
+from weather_base.api import Api
 
 
 class Ui_Form(object):
