@@ -1,14 +1,13 @@
-import sys
 from PyQt5 import QtCore, QtGui, QtWidgets
-sys.path.insert(1, '/home/import/Documents/weather_base/weather_base')
-import api
+from .api import Api
+
 
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
         Form.resize(500, 481)
         Form.setStyleSheet("*{\n" "    background-color : \"#2e3440\";\n" "}")
-        self.root = api.Api()
+        self.root = Api()
         self.frame = QtWidgets.QFrame(Form)
         self.frame.setGeometry(QtCore.QRect(0, -10, 501, 491))
         self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
@@ -82,7 +81,24 @@ class Ui_Form(object):
         QtCore.QMetaObject.connectSlotsByName(Form)
 
     def set_text(self):
-        self.output.setText(self.root.Get_weather(city=self.line_input.text()))
+        try:
+            self.output.setStyleSheet("*{\n"
+                                      "    text-align: center;\n"
+                                      "    font-size: 21px;\n"
+                                      "    color: black;\n"
+                                      "    font-family:\"comic mono\"\n"
+                                      "}")
+            self.output.setText(
+                self.root.Get_weather(city=self.line_input.text()))
+        except:
+            self.output.setStyleSheet("*{\n"
+                                      "    text-align: center;\n"
+                                      "    font-size: 21px;\n"
+                                      "    color: red;\n"
+                                      "    font-family:\"comic mono\"\n"
+                                      "}")
+            self.output.setText(
+                "Opps! \n Make Sure You Entered \nThe Correct City")
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate

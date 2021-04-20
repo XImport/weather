@@ -1,4 +1,3 @@
-
 import sys
 
 from weather_base.style import Ui_Form

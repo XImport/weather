@@ -1,4 +1,3 @@
-
 import requests
 
 
@@ -7,7 +6,6 @@ class Api(object):
         self.key = "89055558a0d4f266d3213909268cb9a9"
 
     def Get_weather(self, city):
-
         weather_keys = ["description", "icon"]
         temp_keys = ["temp", "temp_min", "temp_max", "humidity"]
         self.base = f"https://api.openweathermap.org/data/2.5/weather?q={city}&units=metric&appid={self.key}"
