@@ -1,4 +1,4 @@
-# Min Weather
+# Min Weather :
 
 
 
@@ -25,4 +25,12 @@ pyinstaller  --onefile weather.py
 ![Alt text](assests/screen_weather.png "Title")
 
 
+
+# TODO :
+
+
+
++ create a binary
++ Add icons
++ maybe change title
 
