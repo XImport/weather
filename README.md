@@ -21,7 +21,7 @@ yay -S nuitka
 ```
 pyinstaller  --onefile weather.py
 ```
-
++ finally go to https://openweathermap.org/ sign up for new account and get your api key for free then go to weather_base/api.py and put your api key in self.key variable
 ![Alt text](assests/screen_weather.png "Title")
 
 

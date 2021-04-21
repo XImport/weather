@@ -3,7 +3,9 @@ import requests
 
 class Api(object):
     def __init__(self):
-        self.key = "89055558a0d4f266d3213909268cb9a9"
+        # Enter Your Api Key
+        # Visite to Get Your API KEY  https://openweathermap.org/
+        self.key = "Enter Api Key Here"
 
     def Get_weather(self, city):
         weather_keys = ["description", "icon"]
